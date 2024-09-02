@@ -73,8 +73,7 @@ const mainPage = async (req, res) => {
   
       return res.status(201).send({
         success: true,
-        message: "hello everone. I'm backend developer!",
-        data: users,
+        message: "hello everone. I'm backend developer!"
       });
     } catch (error) {
       return res.status(error.status || 500).send({
