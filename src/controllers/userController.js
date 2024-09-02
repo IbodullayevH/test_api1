@@ -34,7 +34,7 @@ const getAllUsers = async (req, res) => {
 
     return res.status(201).send({
       success: true,
-      message: "Created",
+      message: "all user info",
       data: users,
     });
   } catch (error) {
@@ -66,9 +66,27 @@ const login_user = async(req, res) => {
     }
 }
 
+// 
+const mainPage = async (req, res) => {
+    try {
+      
+  
+      return res.status(201).send({
+        success: true,
+        message: "hello everone. I'm backend developer!",
+        data: users,
+      });
+    } catch (error) {
+      return res.status(error.status || 500).send({
+        success: false,
+        message: error.message,
+      });
+    }
+  };
 
 module.exports = {
   getAllUsers,
   createUser,
-  login_user
+  login_user,
+  mainPage
 };
